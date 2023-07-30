@@ -1,22 +1,17 @@
 import java.util.Arrays;
-public class Main{
- 
+public class Main{ 
   public static void main(String args[]){
-    String str1="hello, world, hi ";
-    String str2=",";
-    
+    String str1="hello, world, hi";
     int count=1;
-    String str3[]= con(str1,str2,count);
+    String str3[]= con(str1,count);
     for(int i=0;i<str3.length;i++){
       System.out.println(str3[i]+" ");
-      
     }
 
   }
-  public static String[] con(String str1,String str2,int count){
+  public static String[] con(String str1,int count){
     String[] strarray=new String[10];
     int k=0;
-    char[] a=new char[100]; 
     String temp="";
     int index=0;
     for(int i=0;i<str1.length();i++){
@@ -36,19 +31,21 @@ public class Main{
       temp="";
       k++;
       System.out.println("count of words "+count);
-  return strarray;}
+   return strarray;}
 
-    public static String substr(int k,int i,String str1){
+  public static String substr(int k,int i,String str1){
         String tmp="";
         for(int j=k;j<=i;j++){
             tmp+=str1.charAt(j);
         }
-    return tmp;}
+    return tmp;
+  }
 
-    public static String substr(int index,String str1){
+  public static String substr(int index,String str1){
         String tmp="";
-        for(int k=index;k<str1.length()-1;k++){
+        for(int k=index;k<str1.length();k++){
             tmp+=str1.charAt(k);
         }
-    return tmp;}
+    return tmp;
+  }
 }
